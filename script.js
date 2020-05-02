@@ -4,6 +4,7 @@ function func(){
   var node1 = document.createElement("div");
   var node = document.createElement("li");
   node1.id=count++;
+  node.id=count++;
   node.className="item";
   node.innerHTML=`<input type="checkbox" id="${count++}" style="margin:10px;" onClick="func1(this.id)">${input.value}`
   var a=document.createElement("a");
