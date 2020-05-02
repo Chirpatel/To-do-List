@@ -19,7 +19,7 @@ function func(){
 
 function del(obj){
 
-  $(`#${obj-2}`).remove();
+  $(`#${obj-3}`).remove();
 }
 
 function func1(obj){
