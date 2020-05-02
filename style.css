@@ -1,9 +1,21 @@
-p{
+
+
+.item{
   display:inline-block;
-  border:2px solid black;
-  border-radius: 5%;
-  margin-left: 2.5px;
+  border:1px solid black;
+  border-radius: 25px;
+  margin: 2.5px;
   padding:5px;
-  background-color:lightblue;
-  color:white;
+  background-color:rgb(196, 240, 196);
+  color:black;
+  width:300px;
+  text-align:justify;
+  word-wrap: break-word;
+}
+#input{
+  border:1px solid black;
+}
+#button-addon2{
+  background-color:rgb(196, 240, 196);
+  color:black;
 }

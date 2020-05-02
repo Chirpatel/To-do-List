@@ -1,40 +1,33 @@
 let count=0;
-let sub=0
+
 function func(){
-  var node = document.createElement("ul");    
-  node.id=count++;
-  var inp=document.createElement("p");
-  inp.appendChild(document.createTextNode(input.value));
-  inp.id=count++;
-  var btn = document.createElement("INPUT");
-  btn.type="checkbox";
-  btn.style="margin-left:10px";
-  btn.id=count++;
-  btn.onclick=function(){
-  func1(this.id);
-  }; 
-  input.value="";       
-  inp.appendChild(btn);
-  node.appendChild(inp);
-  document.getElementById("list").appendChild(node);
+  var node1 = document.createElement("div");
+  var node = document.createElement("li");
+  node1.id=count++;
+  node.className="item";
+  node.innerHTML=`<input type="checkbox" id="${count++}" style="margin:10px;" onClick="func1(this.id)">${input.value}`
+  var a=document.createElement("a");
+  a.innerHTML=`<img id=${count++} src="red_cross.png" height=20px width=20px alt="Delete" onClick="del(this.id)"/>`;
+  a.href="#";
+  a.onClick="del(this.id)";
+  
+  node1.appendChild(node);
+  node1.appendChild(a);
+  document.getElementById("list").appendChild(node1);
+}
+
+function del(obj){
+
+  $(`#${obj-2}`).remove();
 }
 
 function func1(obj){
-  var element1=document.getElementById(obj-2);
-  var element = document.getElementById(obj-1);
-  var inp=document.createElement("p");
-  var v=document.createElement("STRIKE")
-  var btn = document.createElement("INPUT");
-  btn.type="checkbox";
-  btn.style="margin-left:10px";
-  btn.checked=true;
-  v.appendChild(document.createTextNode(element.textContent))
-  v.appendChild(btn)
-  v.appendChild(document.createElement("BR"))
-  inp.appendChild(v);
-  element1.insertBefore(inp,element);
-  element1.removeChild(element);
-  
-  console.log(obj)
-  sub++;   
+  var element1=document.getElementById(obj-1);
+  if($(`#${obj}`).prop("checked")== true){
+    console.log("Checked");
+    element1.style="text-decoration: line-through;"  
+  }else if($(`#${obj}`).prop("checked")== false){
+    console.log("Not Checked");
+    element1.style="text-decoration: none;" 
+  }   
 }
