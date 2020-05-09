@@ -18,11 +18,11 @@ class item{
         itemBox.classList.add('item');
         
         let editButton =document.createElement('Button');
-        editButton.innerHTML="EDIT";
+        editButton.innerHTML="<i class='fas fa-pencil-alt fa-lg'></i>";
         editButton.classList.add('editButton');
 
         let removeButton = document.createElement('button');
-        removeButton.innerHTML="REMOVE";
+        removeButton.innerHTML='<i class="far fa-times-circle fa-lg"></i>';
         removeButton.classList.add('removeButton');
 
         container.appendChild(itemBox);
@@ -31,11 +31,19 @@ class item{
         itemBox.appendChild(editButton);
         itemBox.appendChild(removeButton);
 
-        editButton.addEventListener('click',()=> this.edit(input));
+        editButton.addEventListener('click',()=> this.edit(input,editButton));
         removeButton.addEventListener('click',()=> this.remove(itemBox))
     }
-        edit(input){
+        edit(input,button) {
             input.disabled=!input.disabled;
+            if(input.disabled===false){
+                button.classList.add('blink');
+                button.style.color="lime";
+            }
+            else{
+                button.style.color='rgb(22, 224, 218)';
+                button.classList.remove('blink');
+            }
         }
 
         remove(item){
