@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-  </head>
-  <body>
-    <div>
-      <div class="input-group mb-3" style="margin-right:auto; margin-left: 15px;margin-top:15px; width:300px;">
-        <input type="text" id="input" class="form-control" placeholder="To do" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="func()">Add</button>
-        </div>
-      </div>
-      <ul id="list" style="list-style-type:none;"></ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8231f4b863.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>TODO List</title>
+</head>
+<body>
+  <h1><span class="styling">TODO</span>List</h1>
+  <div class="input_div">
+    <input type="text" class="input" placeholder="What Do You want to Do...">
+    <button class="addbutton"><i class="fas fa-plus"></i></button> 
+  </div>
+  <div class="container">
+    <!--<div class="item">
+      <input type="text" class="item_input" value="Add" disabled>
+      <button class="editbutton">EDIT</button>
+      <button class="removeButton">Remove</button>
     </div>
-    <br>
-    
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+    <div class="item">
+      <input type="text" class="item_input" value="Add" disabled>
+      <button class="editbutton">EDIT</button>
+      <button class="removeButton">Remove</button>
+    </div>-->
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
 </html>
