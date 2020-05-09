@@ -47,7 +47,7 @@ function check(){
     if(input.value!=""){
         new item(input.value);
         input.value="";
-    }
+    } 
 }
 addButton.addEventListener('click',check);
 window.addEventListener('keydown', (e)=>{
